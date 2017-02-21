@@ -1,0 +1,3 @@
+FROM nginx
+
+ENV NGINX_PORT=8080
