@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:latest
 
 RUN \
     chmod 777 /var/cache/nginx /var/run/ && \
