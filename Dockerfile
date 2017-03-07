@@ -6,5 +6,8 @@ RUN \
     sed -ri 's#^(\s*root\s*).*#\1/var/www/;#' /etc/nginx/conf.d/default.conf && \
     mkdir -m 777 /var/www &&\
     echo nginx > /var/www/index.html
+    
+LABEL io.openshift.s2i.scripts-url=file:///tmp/s2i
+COPY ./s2i /tmp
 
 EXPOSE $NGINX_PORT
