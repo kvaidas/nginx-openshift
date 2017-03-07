@@ -9,5 +9,6 @@ RUN \
     
 LABEL io.openshift.s2i.scripts-url=file:///tmp/s2i
 COPY ./s2i /tmp
+WORKDIR /var/www/
 
 EXPOSE $NGINX_PORT
