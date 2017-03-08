@@ -7,7 +7,7 @@ RUN \
     mkdir -m 777 /var/www &&\
     echo nginx > /var/www/index.html
     
-LABEL io.openshift.s2i.scripts-url=file:///usr/local/bin/
+LABEL io.openshift.s2i.scripts-url=image:///usr/local/bin/
 COPY ./s2i /usr/local/bin/
 WORKDIR /var/www/
 
