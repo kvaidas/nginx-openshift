@@ -11,4 +11,7 @@ LABEL io.openshift.s2i.scripts-url=file:///tmp/s2i
 COPY ./s2i /tmp
 WORKDIR /var/www/
 
+# The following is because the image gets built as root and wants to run as root which is forbidden in OpenShift
+USER 1001
+
 EXPOSE $NGINX_PORT
