@@ -1,4 +1,5 @@
 #!/bin/bash
 
 rm -f cloned_at
+mv /tmp/src/* /var/www/
 touch cloned_at
