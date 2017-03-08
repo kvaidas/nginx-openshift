@@ -8,7 +8,7 @@ RUN \
     echo nginx > /var/www/index.html
     
 LABEL io.openshift.s2i.scripts-url=file:///tmp/s2i
-COPY ./s2i /tmp
+COPY ./s2i /tmp/s2i
 WORKDIR /var/www/
 
 # The following is because the image gets built as root and wants to run as root which is forbidden in OpenShift
